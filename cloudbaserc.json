@@ -18,7 +18,7 @@
             "WEBSOCKET_ENABLED": "false"
           },
           "volumeMounts": {
-            "/var/www/html/.data": "onemanager-cfs"
+            "/www/onemanager-php/.data": "onemanager-cfs"
           }
         }
       }
