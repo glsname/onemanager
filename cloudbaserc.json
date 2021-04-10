@@ -8,15 +8,18 @@
         "use": "@cloudbase/framework-plugin-container",
         "inputs": {
           "serviceName": "onemanager",
-          "servicePath": "/one",
+          "servicePath": "/",
           "uploadType": "image",
           "containerPort": 80,
           "imageInfo": {
-            "imageUrl": "186526/onemanager-php:latest"
+            "imageUrl": "peng4740/onemanager-php:latest"
           },
           "envVariables": {
             "WEBSOCKET_ENABLED": "false"
           },
+          "volumeMounts": {
+            "/var/www/html/.data": "onemanager-cfs"
+          }
         }
       }
     },
@@ -24,7 +27,7 @@
       "addons": [
         {
           "type": "CFS",
-          "name": "zfile-cfs"
+          "name": "onemanager-cfs"
         }
       ]
     }
