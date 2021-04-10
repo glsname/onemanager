@@ -12,13 +12,13 @@
           "uploadType": "image",
           "containerPort": 80,
           "imageInfo": {
-            "imageUrl": "glsname/onemanager:latest"
+            "imageUrl": "186526/onemanager-php:latest"
           },
           "envVariables": {
             "WEBSOCKET_ENABLED": "false"
           },
           "volumeMounts": {
-            "/www": "onemanager-cfs"
+            "/www/onemanager-php/.data": "onemanager-cfs"
           }
         }
       }
