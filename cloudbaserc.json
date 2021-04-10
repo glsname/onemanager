@@ -1,0 +1,32 @@
+{
+  "version": "2.0",
+  "envId": "{{env.ENV_ID}}",
+  "framework": {
+    "name": "onemanager",
+    "plugins": {
+      "client": {
+        "use": "@cloudbase/framework-plugin-container",
+        "inputs": {
+          "serviceName": "onemanager",
+          "servicePath": "/one",
+          "uploadType": "image",
+          "containerPort": 80,
+          "imageInfo": {
+            "imageUrl": "186526/onemanager-php:latest"
+          },
+          "envVariables": {
+            "WEBSOCKET_ENABLED": "false"
+          },
+        }
+      }
+    },
+    "requirement": {
+      "addons": [
+        {
+          "type": "CFS",
+          "name": "zfile-cfs"
+        }
+      ]
+    }
+  }
+}
