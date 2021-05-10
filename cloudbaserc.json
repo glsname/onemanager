@@ -12,7 +12,7 @@
           "uploadType": "image",
           "containerPort": 80,
           "imageInfo": {
-            "imageUrl": "186526/onemanager-php:latest"
+            "imageUrl": "ccr.ccs.tencentyun.com/glimmer/onemmanager-php"
           },
           "envVariables": {
             "WEBSOCKET_ENABLED": "false"
